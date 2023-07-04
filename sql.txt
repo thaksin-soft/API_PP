@@ -1,0 +1,20 @@
+-- Table: public.tb_users
+
+-- DROP TABLE IF EXISTS public.tb_users;
+
+CREATE TABLE IF NOT EXISTS public.tb_users
+(
+    roworder integer NOT NULL DEFAULT nextval('tb_users_roworder_seq'::regclass),
+    user_name character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default",
+    fristname character varying(255) COLLATE pg_catalog."default",
+    lastname character varying(255) COLLATE pg_catalog."default",
+    role smallint,
+    create_date_time timestamp without time zone DEFAULT now(),
+    CONSTRAINT tb_users_pkey PRIMARY KEY (user_name)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.tb_users
+    OWNER to postgres;
