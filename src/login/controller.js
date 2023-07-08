@@ -13,7 +13,7 @@ const secretkey = "thaksinodg";
 
 const addUser = async(req, res) => {
 
-    const { user_name, password, firstname, lastname, telephone,role } = req.body;
+    const { name, password, firstname, lastname, telephone,role } = req.body;
 
     //const lowEmail = emailadd.toLowerCase();
 
