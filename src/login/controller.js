@@ -5,7 +5,7 @@ const queries = require('./queries');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-
+ 
 const secretkey = "thaksinodg";
 
 
